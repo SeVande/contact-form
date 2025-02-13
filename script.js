@@ -78,13 +78,64 @@ submit.addEventListener('click', event => {
         });
 
         setTimeout(() => {
+            let fisrtName = document.getElementById("first-name").value;
+            let lastName = document.getElementById("last-name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            
+            let successMessage = document.getElementById("success");
+            successMessage.innerHTML = `<strong>Message Sent!</strong>
+            <br>
+            Name: ${fisrtName} ${lastName}
+            <br>
+            Email: ${email}
+            <br>
+            Message: ${message}`;
+            
+            successMessage.style.display = "block";
             success.classList.add('submitted');
         }, 300);
+
+
         setTimeout(() => {
+            let fisrtName = document.getElementById("first-name").value;
+            let lastName = document.getElementById("last-name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            
+            let successMessage = document.getElementById("success");
+            successMessage.innerHTML = `<strong>Message Sent!</strong>
+            <br>
+            Name: ${fisrtName} ${lastName}
+            <br>
+            Email: ${email}
+            <br>
+            Message: ${message}`;
+            
+            successMessage.style.display = "block";
             success.classList.remove('submitted');
         }, 5000);
     }
 
+
+    // document.getElementById("main-form").addEventListener("submit-form", function(event) {
+    //     event.preventDefault();
+    //     let fisrtName = document.getElementById("first-name").value;
+    //     let lastName = document.getElementById("last-name").value;
+    //     let email = document.getElementById("email").value;
+    //     let message = document.getElementById("message").value;
+
+    //     let successMessage = document.getElementById("success");
+    //     successMessage.innerHTML = `<strong>Message Sent!</strong>
+    //     <br>
+    //     Name: ${fisrtName} ${lastName}
+    //     <br>
+    //     Email: ${email}
+    //     <br>
+    //     Message: ${message}`;
+
+    //     successMessage.style.display = "block";
+    // });
     // contactForm.submit();
     // event.preventDefault();
 });
